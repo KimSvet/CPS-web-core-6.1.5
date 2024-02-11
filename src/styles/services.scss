@@ -1,0 +1,212 @@
+$mobVisDescr: 90px;
+$tablVisDescr: 160px;
+
+.services_head {
+    @media screen and (min-width: $lgScreen) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.services_head__icons {
+    background-color: white;
+    display: flex;
+    padding: 24px $mobPdng;
+    border-bottom: 1px solid $borderSectionColor;
+    @media screen and (min-width: $midScreen) {
+        padding: 24px $tablPdng;        
+    }
+    @media screen and (min-width: $lgScreen) {
+        padding: 24px $pcPdng;
+        background-color: inherit;
+        order: 2;
+    }
+    .burger {
+        order: -1;
+        margin-right: auto;
+        @media screen and (min-width: $midScreen) {
+            position: relative;
+            &::after {
+                content: "";
+                background: $lighterClr;
+                width: 2px;
+                height: 32px;
+                display:block;
+                position: absolute;
+                top: 10%;
+                left: 60px;
+            }
+        }
+        @media screen and (min-width: $lgScreen) {
+            display: none;
+        }
+        & ~ .icons {
+            margin-left: 16px;
+        }
+    }
+    .call, .chat, .profile {
+        display: none;
+        @media screen and (min-width: $midScreen) and (max-width: $maxMidScreen) {
+            display: block;
+        }
+    }
+    .profile {
+        @media screen and (min-width: $midScreen) {
+            margin-right: 42px;
+        }
+    }
+    .logo {
+        align-self: center;
+        left: 23%;
+        @media screen and (min-width: $midScreen) {
+            left: 15%;
+        }
+        @media screen and (min-width: $lgScreen) {
+            display: none;
+        }
+    }
+    .repair {
+        position: relative;
+        @media screen and (max-width: $maxMidScreen) {
+            &::before {
+                content: "";
+                background: $lighterClr;
+                width: 2px;
+                height: 32px;
+                display:block;
+                position: absolute;
+                right: 60px;
+                top: 10%;
+            }
+        }
+        @media screen and (min-width: $lgScreen) {
+            margin-right: 130px;
+            &::before {
+                content: "Оставить заявку";
+                position: absolute;
+                line-height: 24px;
+                text-align: right;
+                font-weight: 500;
+                right: 50px;
+                top: 8px;
+                text-wrap: nowrap;
+            }
+        }
+    }
+    .checkstatus {
+        @media screen and (min-width: $lgScreen) {
+            position: relative;
+            &::before {
+                content: "Статус ремонта";
+                position: absolute;
+                line-height: 24px;
+                text-align: right;
+                font-weight: 500;
+                right: 50px;
+                top: 8px;
+                text-wrap: nowrap;
+            }
+        }
+    }
+}
+.services_head__title {
+    margin: 24px $mobPdng;
+    position: relative;
+    @media screen and (min-width: $midScreen) {
+        margin: 24px $tablPdng;        
+    }
+    @media screen and (min-width: $lgScreen) {
+        margin: 24px $pcPdng;        
+    }
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        border-right: 4px solid $highLightColor;
+        height: 100%;
+        width: 0;
+        border-radius: 0 10px 10px 0;
+        left: -$mobPdng;
+        @media screen and (min-width: $midScreen) {
+            left: -$tablPdng;
+        }
+        @media screen and (min-width: $lgScreen) {
+            left: -$pcPdng;
+        }
+    }
+}
+
+.services_navigation {
+    display: flex;
+    overflow: auto;
+    padding: 0 $mobPdng;
+    margin-bottom: 32px;
+    @media screen and (min-width: $midScreen) {
+        padding: 0 $tablPdng;
+    }
+    @media screen and (min-width: $lgScreen) {
+        flex-wrap: wrap;
+        padding: 0 $pcPdng;
+    }
+    &__src {
+        font-size: 1rem;
+        text-decoration: none;
+        color: $hColor;
+        line-height: 24px;
+        text-align: left;
+        display: block;
+        padding: 8px 15px;
+        white-space: nowrap;
+        /*&:first-child {
+            border: 2px solid $navBorderClr;
+            border-radius: 6px;
+            background-color: white;
+        }*/
+    }
+}
+.services_description {
+    margin: 24px 0;
+    @media screen and (min-width: $midScreen) {
+        margin: 0 $tablPdng;
+        display: flex;
+    }
+    @media screen and (min-width: $lgScreen) {
+        margin: 0 $pcPdng;
+    }
+    .description {
+        @media screen and (max-width: $mobScreen) {
+            padding: 0 $mobPdng;
+        }
+        
+        @media screen and (min-width: $midScreen) {
+            width: 50%;
+        }
+        &__text {
+            font-size: 1rem; 
+            line-height: 18px;
+            text-align: left;
+            height: $mobVisDescr; /*fit-content, $mobVisDescr*/
+            overflow: hidden;
+            @media screen and (min-width: $midScreen) {
+                height: $tablVisDescr;
+                margin-right: 48px;
+            }
+        }
+        &__more-button {
+            margin: 16px 0 0 0;
+            @media screen and (min-width: 1438px) {
+                display: none;
+            }
+        }
+    }
+    .img-container {
+        margin-top: 16px;
+        @media screen and (min-width: $midScreen) {
+            width: 50%;
+        }
+        &__img {
+            width: 100%;
+        }
+    }
+
+}

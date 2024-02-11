@@ -1,0 +1,119 @@
+.left-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    @media screen and (max-width: $maxMidScreen) {
+        left: -100%;
+        transition: transform 0.3s ease;
+    }
+    @media screen and (min-width: $midScreen) and (max-width: $maxMidScreen) {
+        left: -320px;
+    }
+    &.open {
+        @media screen and (max-width: $maxMidScreen) {
+            transform: translateX(100%);
+        }
+    }
+}
+
+@media screen and (min-width: $lgScreen) {
+    body {
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        main {
+            grid-column: 2;
+        }
+    }
+}
+.left-sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    box-shadow: 16px 0px 52px 0px $shdwClr1, -2px 0px 4px 0px $shdwClr2;
+    background-color: white;
+    @media screen and (min-width: $midScreen) {
+        width: 320px;
+    }
+    @media screen and (min-width: $lgScreen) {
+        display: flex; 
+        box-shadow: none;
+    }
+    &__head {
+        display: flex;
+        padding: 24px $mobPdng;
+        position: relative;
+        @media screen and (min-width: $midScreen) {
+            padding: $tablPdng 24px;
+        }
+        .search {
+            margin-left: auto;
+        }
+        .close {
+            @media screen and (min-width: $lgScreen) {
+                display: none;
+            }
+        }
+        .logo {
+            position: absolute;
+            align-self: center;
+            left: 25%;
+            @media screen and (min-width: $lgScreen) {
+                left: 5%
+            }
+        }        
+    }
+    &__main {
+        flex: 1 1 auto;        
+    }
+    &__footer {
+        padding: 32px 24px;
+        .icons {
+            margin-right: 16px;
+        }
+        p {
+            margin: 12px 0;
+        }
+    }
+}
+
+.left-sidebar_menu {
+    padding: 16px 24px;
+    &__item {
+        padding: 16px 0;
+        position: relative;
+    }
+    &__href {    
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: left;
+        text-decoration: none;
+    }
+}
+
+.contact-numbers {
+    &__email {
+        font-weight: normal;
+        font-size: 1rem;
+        line-height: 24px;
+        text-align: left;
+    }
+    &__number {
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 32px;
+        text-align: left;
+    }
+}
+
+.lang {
+    padding-top: 34px;
+    button {
+        margin-right: 10px;
+        font-weight: 500;
+    }
+}
+

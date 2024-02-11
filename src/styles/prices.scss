@@ -1,0 +1,94 @@
+.prices-menu {
+    font-size: 0.875rem;
+}
+.title {
+    color: $tblTitleClr;
+    font-weight: 400;
+    text-align: left;
+}
+.order-button {
+    background-color: $btnOrderClr;
+    background-image: url('./img/ic/dropdown.png');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    color: white;
+    font-weight: 500;
+    padding: 6px 30px 6px 12px;
+    border-radius: 15px;
+    border: 0;
+}
+.prices-container {
+    &__item {
+        background: white;
+        border-radius: 10px;
+        width: 260px;
+        height: fit-content;
+        border: 1px solid white;
+        margin: $mobPdng $mobPdng/2;
+        position: relative;
+        .card__item {
+            margin: $mobPdng;
+        }
+        .card__order {
+            position: absolute;
+            bottom: 10%;
+            right: 10%;
+        }
+    }
+    @media screen and (min-width: $midScreen) {
+        display: none;
+    }
+}
+.price-table {
+    width: 95%;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    td {
+        border-bottom: 1px solid $lighterClr;
+    }
+    tbody {
+        border-left: 16px solid white;
+        border-right: 16px solid white;
+        background-color: white;
+    }
+    .title {
+        padding: $mobPdng 0;
+    }
+    .content {
+        padding: 23px 0;       
+    }
+    @media screen and (max-width: $mobScreen) {
+        display: none;
+    }
+}
+.prices-menu__update {
+    padding: $mobPdng;
+    width: 288px;
+    @media screen and (min-width: $midScreen) {
+        padding: $tablPdng;
+        width: 420px;
+    }
+    @media screen and (min-width: $lgScreen) {
+        padding: $pcPdng;
+    }
+}
+.prices-menu__offer {
+    padding: 0 $mobPdng;
+    @media screen and (min-width: $midScreen) {
+        padding: 0 $tablPdng;
+    }
+    @media screen and (min-width: $lgScreen) {
+        padding: 0 $pcPdng;
+    }
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: left;
+    .offer__img {
+        background: url('./img/ic/Line.png') no-repeat;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 8px; /* Отступ между иконкой и текстом кнопки */
+        padding: 6px;
+    }
+}

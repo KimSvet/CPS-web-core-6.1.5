@@ -1,0 +1,54 @@
+.devices-container {
+    @media screen and (min-width: $midScreen) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item {
+        width: 240px;
+        height: 160px;
+        border: 1px solid $lighterClr;
+        border-radius: 5px;
+        background-color: white;
+        margin: $mobPdng $mobPdng/2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @media screen and (max-width: $mobScreen) {
+            display: flex;
+        }
+        &:nth-child(n+4) {
+            @media screen and (max-width: 1344px) {
+                display: none;
+            }
+        }
+        &:nth-child(n+5){
+            @media screen and (max-width: 1600px) {
+                display: none;
+            }
+        }
+        &:nth-child(n+6){
+            @media screen and (max-width: 1856px) {
+                display: none;
+            }
+        }
+        .device-description {
+            font-weight: 500;
+            padding: 16px;
+        }
+        .go-button {
+            align-self: flex-end;
+        }
+    }
+}
+.devices__more-button {
+    margin: 0 $pcPdng;
+    @media screen and (max-width: $mobScreen) {
+        display: none;
+    }
+    @media screen and (min-width: 1857px) {
+        display: none;
+    }
+}
+.devices__less-button {
+    display: none;
+}

@@ -1,0 +1,9 @@
+import './main.scss'
+import './modules/showContent'
+import './modules/swiper'
+import './modules/leftAsideModal'
+import './modules/callModal'
+import './modules/feedbackModal'
+import './modules/showBrands'
+import './modules/showDevices'
+console.log('Hello, 5565!')

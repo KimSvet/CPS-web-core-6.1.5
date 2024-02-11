@@ -1,0 +1,28 @@
+.info {
+    font-size: 0.875rem;
+    margin: 40px $mobPdng;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    @media screen and (min-width: $midScreen) {
+        flex-direction: row;
+        margin: 40px $tablPdng;
+    }
+    @media screen and (min-width: $lgScreen) {
+        margin: 40px $pcPdng;
+    }
+    & > * {
+        padding: $mobPdng/2 0;
+        flex-basis: 32%;
+    }
+    &__team {
+        @media screen and (min-width: $midScreen) {
+            text-align: left;
+        }
+    }
+    &__offer {
+        @media screen and (min-width: $midScreen) {
+            text-align: right;
+        }
+    }
+}

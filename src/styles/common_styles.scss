@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'TTLakes';
+  color: $mainTxtClr;
+}
+ul {
+  list-style-type: none;
+}
+body {
+  background-color: $bgColor;
+}
+body {
+  width: 100%;
+  min-width: 320px;
+  @media screen and (min-width: $midScreen) {
+    min-width: 768px;
+  }
+  @media screen and (min-width: $lgScreen) {
+    min-width: 1100px;
+  }
+}
+main section {
+  border-bottom: 1px solid $borderSectionColor;
+  margin-bottom: 32px;
+}
+
+button {
+  border: 0;
+  background: transparent;
+}
+.icons {
+  width: 40px;
+  height: 40px;
+}
+
+h1 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  background-image: linear-gradient(to right, #f8f8f8, #FFFFFF);
+  font-size: 1rem;
+  font-weight: 400;
+  color: $hColor;
+  line-height: 24px;
+  text-align: left;
+  padding: 16px $mobPdng;
+  @media screen and (min-width: $midScreen) {
+    padding: 16px $tablPdng;
+  }
+  @media screen and (min-width: $lgScreen) {
+    padding: 16px $pcPdng;
+  }
+}
+
+.burger {
+  background-image: url('./img/ic/burger.png');
+}
+.call {
+  background-image: url('./img/ic/call.png');
+}
+.chat {
+  background-image: url('./img/ic/chat.png');
+}
+.profile {
+  background-image: url('./img/ic/profile.png');
+}
+.repair {
+  background-image: url('./img/ic/repair.png');
+}
+.checkstatus {
+  background-image: url('./img/ic/checkstatus.png');
+}
+.logo {
+  position: absolute;
+}
+.search {
+  background-image: url('./img/ic/search.png');
+}
+.close {
+  background-image: url('./img/ic/close.png');
+}
+
+.more-button, .less-button {
+  display: inline-block;
+  margin: 16px $pcPdng;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  background-color: inherit;
+  .less-button__icon {
+    transform: rotate(180deg);
+  }
+  &__icon {
+      background: url('./img/ic/icon.png') no-repeat center center;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 8px; /* Отступ между иконкой и текстом кнопки */
+      padding: 12px;
+  }
+}

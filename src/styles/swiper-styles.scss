@@ -1,0 +1,27 @@
+.swiper-slide {
+    display: flex !important;
+    &.brands-container__item {
+        width: 240px !important;
+        height: 72px !important;
+    }
+    &.devices-container__item {
+        width: 240px !important;
+        height: 160px !important;
+    }
+    &.prices-container__item {
+        width: 260px !important;
+        height: fit-content !important;
+        flex-direction: column !important;
+    }
+}
+.swiper-pagination {
+    position: static !important;
+    &-bullet {
+        width: 12px !important;
+        height: 12px !important;
+        background-color: $unactBulltClr !important;
+        &-active {
+            background-color: $actBulltClr !important;
+        }
+    }
+}

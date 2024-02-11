@@ -1,0 +1,87 @@
+.brands {
+    margin-left: auto;
+    margin-right: auto;
+    }
+.brands-container {
+    width: fit-content;
+    @media screen and (min-width: $midScreen) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 16px $tablPdng - 12px;
+    }
+    &__item {
+        width: 240px;
+        height: 72px;
+        margin: 8px 12px;
+        background: white;
+        border: 1px solid $lighterClr;
+        border-radius: 5px;
+        display: flex; 
+        justify-content: flex-end;
+        background-repeat: no-repeat;
+        background-position: 16px center;
+        @media screen and (min-width: $midScreen) {
+            width: 224px;
+        }
+        @media screen and (max-width: $mobScreen) {
+            display: flex;
+        }
+        &:nth-child(n+7) {
+            @media screen and (max-width: 1336px) {
+                display: none;
+            }
+        }
+        &:nth-child(n+9){
+            @media screen and (max-width: 1583px) {
+                display: none;
+            }
+        }
+        &:nth-child(n+11){
+            @media screen and (max-width: 1831px) {
+                display: none;
+            }
+        }
+    }
+}
+.brands__more-button, .brands__less-button {
+    @media screen and (max-width: $mobScreen) {
+        display: none;
+    }
+    @media screen and (min-width: 1832px) {
+        display: none;
+    }
+}
+.brands__less-button {
+    display: none;
+}
+.go-button {
+    background-image: url('./img/ic/go.png');
+    width: 40px;
+    height: 40px;
+    margin: 16px;
+}
+
+.lenovo-block {
+    background-image: url(./img/brands/Bitmap.png);    
+}
+.bosch-block {
+    background-image: url(./img/brands/Bitmap-1.png);
+}
+.samsung-block {
+    background-image: url(./img/brands/Bitmap-2.png);
+}
+.hp-block {
+    background-image: url(./img/brands/Bitmap-3.png);
+}
+.apple-block {
+    background-image: url(./img/brands/Bitmap-4.png);
+}
+.acer-block {
+    background-image: url(./img/brands/Bitmap-5.png);
+}
+.viewsonic-block {
+    background-image: url(./img/brands/Bitmap-6.png);
+}
+.sony-block {
+    background-image: url(./img/brands/Bitmap-7.png);
+}
